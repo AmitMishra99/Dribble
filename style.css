@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;   
+}
+body{
+    background-color: #F8F7F4;
+    position: relative;
+    font-family: 'Mona Sans';
+}
+#page1{
+    height: 130%;
+    width: 100%;
+}
+#nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+#logo{
+    margin-left: 12.5%;
+    height: 50px;
+    width: 100px;
+}
+#nav-1{
+    width: 34%;
+    display: flex;
+}
+#nav-1 h3{
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+#nav-2 {
+    margin-left: 33%;    
+    display: flex;
+    gap: 5px;
+}
+button{
+    border: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+}
+#nav-2 button:nth-child(2){
+    color: white;
+    background-color: black;
+}
+#nav-2 button:hover:nth-child(2){
+    background-color: rgb(72, 71, 71);
+    cursor: pointer;
+}
+#content{
+    padding: 4% 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content #dbox{
+    padding: 6px;
+    background-color: rgba(219, 202, 202, 0.517);
+    border-radius: 30px;
+    width: fit-content;
+}
+#dbox h3{
+    font-weight: lighter;
+    width: fit-content;
+    background-color: rgba(247, 255, 10, 0.616);
+    border-radius: 10px;
+}
+h1{
+    margin-top: 28px;
+    font-size: 55px;
+    font-weight: 100;
+    line-height: 50px;
+}
+h2{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    color: black;
+}
+#button{
+    margin-top: 35px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    width: fit-content;
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+#button:hover{
+    background-color: rgb(72, 71, 71);
+    cursor: pointer;
+}
+#bottom{
+    height: 45%;
+    width: 100%;
+    padding: 2vh 0;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#linear{
+    display: inline-block;
+    height: 100%;
+    width: 90%;
+    padding-left: 3vw;
+    animation-name: scrollAnimation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.elem{
+    display: inline-block;
+    height: 100%;
+    width: 22%;
+    margin-right: 3vw;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
+@keyframes scrollAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+.elem video , .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem:nth-last-child(1){
+    margin-right: 0;
+}
+#text-bottom{
+    height: 40%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    padding: 2vh 1.5vw;
+    color: white;
+}
+#text-bottom h4{
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 3.5vh;
+    line-height: 1.5vw;
+    text-align: left;
+}
+#bottom-below{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    padding-top: 1vh;
+    align-items: flex-start;
+    gap: .7vw;
+}
+#bottom-below h5{
+    font-size: 10px;
+    padding: .8vh .8vw;
+    border-radius: 50px;
+    border: .5px solid white;
+}
+#text-bottom h4:nth-child(2){
+    margin-top: 0;
+} 
+#page2{
+    height: 320%;
+    width: 100%;
+    padding: 3.5vw 4vw;
+    position: relative;
+    /* background-color:aqua; */
+}
+#page2 h1{
+    font-size: 50px;
+    font-weight: 350;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#page2 .total-line{
+    margin-bottom: 65px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+#page2 .box{
+    display: inline-block;
+    height: 225px;
+    width: 250px;
+    border-radius: 15px ;
+    overflow: hidden;
+    position: relative;
+    transition: all ease .3s;
+    /* background-color: red; */
+}
+#page2 .box:nth-child(4n){
+    margin-right: 0;
+}
+#page2 .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page2 .box .box-bottom{
+    background-color: yellow;
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.484));
+    transition: all ease .3s;
+    color: white;
+    padding: 5vh 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2 .box .box-bottom h2{
+    font-weight: 600;
+    font-size: 16px;
+}
+#page2 .box .box-bottom i{
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    font-weight: 590;
+    border-radius: 50%;
+}
+#page2 .box .box-bottom i:hover{
+    color: rgb(86, 86, 86);
+}
+#page2 .box:hover .box-bottom{
+     bottom: 0;
+}
+#page2 .box:hover{
+    cursor: pointer;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+
+}
+#page2 .auto-truncate {
+    width: 150px; /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#page2 #bottom-line{
+    height: 30px;
+    width: 270px;
+    position: absolute;
+    display: flex;
+}
+#page2 #bottom-line #bottom-line1{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+#page2 #bottom-line #bottom-line2{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#page2 #bottom-line img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+#page2 #bottom-line img:hover{
+    cursor: pointer;
+}
+
+#page2 #bottom-line .first{
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 8px;
+}
+#page2 .truncated{
+    width: 110px; /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#page2 #bottom-line .first:hover{
+    cursor: pointer;
+}
+#page2 #bottom-line .second{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.168);
+    padding: .3vh .3vw;
+    font-size: 11px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-left: 8px;
+    transition: all ease .3s;
+}
+#page2 #bottom-line .second:hover{
+    cursor: pointer;
+    background-color: black;
+}
+#page2 #bottom-line i{
+    color: gray;
+    /* margin-left: 10px; */
+}
+#page2 #bottom-line .ri-heart-3-fill:hover{
+    cursor: pointer;
+    color: rgb(212, 96, 135);
+}
+#page2 #bottom-line .ri-eye-fill{
+    margin-left: 8px;
+}
+#page2 #bottom-line h6{
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 3px;
+}
+#page2 #button{
+    height: 100px;
+    width: 100%;
+    background-color: #F8F7F4;
+    position: relative;
+    padding-top: 2vh;
+}
+#page2 #button button{
+    font-family: 'Mona Sans';
+    font-weight: 550;
+    font-size: 14px;
+    padding: 2vh 1.5vw;
+    border-radius: 50px;
+    position: absolute;
+    background-color: transparent;
+    transform: translateX(-50%);
+    left: 50%;
+    border: 2px solid black;
+}
+#page2 #button button:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    padding: 6vh 0;
+    padding-bottom: 10vh;
+}
+#page3 #internal{
+    width: 100%;
+    height: 100%;
+    background-color: #FFDA79;
+    padding: 7vh ;
+}
+#page3 #internal h1{
+    text-align: center;
+    font-family: 'source Serif 4';
+    font-size: 65px;
+    font-weight: 500;
+    line-height:70px;
+    margin-bottom: 30px;
+}
+#page3 #internal h4{
+    font-family: 'Mona Sans';
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+}
+#page3 #two-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#page3 button{
+    font-size: 14px;
+    padding: 2.3vh 1.7vw;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border: none;
+    margin: 40px 0;
+}
+#page3 button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+#page3 #white{
+    font-size: 14px;
+    padding: 2.3vh 1.7vw;
+    border-radius: 50px;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    border: none;
+    margin: 40px 0;
+}
+#page3 #white:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+#page3 a{
+    color: black;
+}
+
+
+#last-page{
+    height: 60%;
+    width: 100%;
+    position: relative;
+    /* background-color: burlywood; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#container{
+    height: 50%;
+    width: 108%;
+    padding: 2.5vh 0;
+    padding-left: 3vw;
+    display: inline-block;
+    animation: 20s scroller infinite linear;
+    margin-bottom: 7.5vh;
+}
+@keyframes scroller {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+#container img{
+    height: 180px;
+    width: 230px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 4px -4px 0 #E2EBFD, 6px -6px 0 #F8F7F4, 10px -10px 0 #e9d8f9;
+    border: 2px solid #F8F7F4;
+    transition: all linear .3s;
+    margin-right: 4vw;
+}
+#container img:nth-last-child(1){
+    margin-right: 0;
+}
+#container img:hover{
+    box-shadow: 7px -7px 0 #E2EBFD,  10px -10px 0 #F8F7F4, 18px -18px #e9d8f9;
+    cursor: pointer;
+}
+#upper-bottom{
+    height: 15%;
+    width: 100%;
+    /* background-color: red; */
+    display: grid;
+    position: relative;
+    padding: 0 9vw;
+    grid-template-columns: 15% 70% 15%;
+    /* margin-bottom: 4vh; */
+}
+#upper-bottom img{
+    height: 8vh;
+    /* width: 100%; */
+    object-fit: cover;
+    grid-column: 1/2;
+    align-items: center;
+    /* background-color: yellow; */
+}
+#middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#middle h5{
+    font-weight: 600;
+    font-family: 'Mona Sans';
+}
+#middle h5:hover{
+    cursor: pointer;
+}
+#socials{
+    margin-left: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#socials i{
+    font-size: 20px;
+}
+#socials i:hover{
+    cursor: pointer;
+}
+#footer{
+    height:calc(90% - (50% + 15%));
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9vw;
+}
+#footer-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+#footer h5{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(93, 93, 93);
+}
+#footer h5:hover{
+    cursor: pointer;
+}
+#footer-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
